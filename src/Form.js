@@ -64,7 +64,7 @@ const Form = props => {
     const onSubmit = evt => {
         evt.preventDefault()
         console.log(`submit`)
-        submit()
+        submit(values)
     }
 
     const onChange = evt => {
@@ -80,7 +80,7 @@ const Form = props => {
         <FormContainer onSubmit={onSubmit}>
             <FillBox>
                 <ErrorNotice>
-                    <div>{errors.name}</div>
+                    <div>{errors.first_name}</div>
                     <div>{errors.email}</div>
                     <div>{errors.password}</div>
                     <div>{errors.tos}</div>
@@ -89,7 +89,7 @@ const Form = props => {
                     <FormName>Name:</FormName>
                     <Input 
                         name="first_name" 
-                        type="name"
+                        type="first_name"
                         placeholder="Neo"
                         value={values.first_name}
                         onChange={onChange}

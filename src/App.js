@@ -75,7 +75,7 @@ function App() {
     .catch(err => {
       console.log(`Oh, a glitch in the matrix ${err}... RUN`)
     })
-    unplugFromMatrix(initial)
+    setUnplugFromMatrix(initial)
   }
 
   const uploadData = (name, value) => {
@@ -93,14 +93,13 @@ function App() {
       })
   }
 
-  const addFighterForm = () => {
-    console.log(`aisldfughadirfguh`)
+  const addFighterForm = data => {
 
     const newZionFighter = {
-        name: unplugFromMatrix.first_name.trim(),
-        email: unplugFromMatrix.email.trim(),
-        password: unplugFromMatrix.password,
-        tos: unplugFromMatrix.tos,
+        first_name: data.first_name.trim(),
+        email: data.email.trim(),
+        password: data.password,
+        tos: data.tos,
     }
     addFighter(newZionFighter)
   }
