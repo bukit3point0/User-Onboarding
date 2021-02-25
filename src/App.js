@@ -70,13 +70,14 @@ function App() {
     axios.post("https://reqres.in/api/users", newFighter)
     .then(res => {
       setZionFighters([...zionFighters, res.data])
-      console.log(`new fighter`, res.data)
+      // console.log(`new fighter`, res.data)
     })
     .catch(err => {
       console.log(`Oh, a glitch in the matrix ${err}... RUN`)
     })
     setUnplugFromMatrix(initial)
   }
+  // console.log(`new set`, zionFighters)
 
   const uploadData = (name, value) => {
     yup.reach(confirmZionFighter, name)

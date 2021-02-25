@@ -58,9 +58,6 @@ const Form = props => {
         errors
     } = props
 
-    console.log(submit)
-    console.log(props)
-
     const onSubmit = evt => {
         evt.preventDefault()
         console.log(`submit`)
@@ -89,7 +86,7 @@ const Form = props => {
                     <FormName>Name:</FormName>
                     <Input 
                         name="first_name" 
-                        type="first_name"
+                        type="text"
                         placeholder="Neo"
                         value={values.first_name}
                         onChange={onChange}
